@@ -4,8 +4,12 @@ import json
 import string
 import requests
 from datetime import datetime, timezone
+import os
+from dotenv import load_dotenv
 
-API_GATEWAY = "empty for now"
+load_dotenv()
+
+API_GATEWAY = os.getenv("API_GATEWAY_URL")
 interval = 10 
 
 pages = ["/home", "/products", "/cart", "/checkout", "/profile", "/about"]
